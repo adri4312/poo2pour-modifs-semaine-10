@@ -33,7 +33,7 @@ TextViewer.o: TextViewer.cc TextViewer.h SupportADessin.h
 Systeme.o: Systeme.cc Systeme.h Particule.h obstacle.h SupportADessin.h
 	$(CXX) $(CXXFLAGS) -c Systeme.cc
 
-Agent.o: Agent.cc Agent.h Particule.h
+Agent.o:Agent.h Particule.h
 	$(CXX) $(CXXFLAGS) -c Agent.cc
 	
 
