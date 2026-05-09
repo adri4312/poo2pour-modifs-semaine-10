@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra
 
 # Objets communs
-COMMON_OBJS = Vecteur3D.o Particule.o ParticuleNeige.o ParticuleRoche.o Source.o Aleatoire.o obstacle.o TextViewer.o Systeme.o Agent.o 
+COMMON_OBJS = Vecteur3D.o Particule.o ParticuleNeige.o ParticuleRoche.o Source.o Aleatoire.o obstacle.o TextViewer.o Systeme.o 
 
 # Exécutables
 TARGETS = testNeige testP11
@@ -33,8 +33,6 @@ TextViewer.o: TextViewer.cc TextViewer.h SupportADessin.h
 Systeme.o: Systeme.cc Systeme.h Particule.h obstacle.h SupportADessin.h
 	$(CXX) $(CXXFLAGS) -c Systeme.cc
 
-Agent.o:Agent.h Particule.h
-	$(CXX) $(CXXFLAGS) -c Agent.cc
 	
 
 	
@@ -49,7 +47,7 @@ testP11.o: testP11.cc Vecteur3D.h Particule.h Obstacle.h Source.h Systeme.h
 	$(CXX) $(CXXFLAGS) -c testP11.cc
 
 # --- Règles pour créer les exécutables ---
-testNeige: $(COMMON_OBJS) testNeige.o ParticuleNeige.o Agent.o
+testNeige: $(COMMON_OBJS) testNeige.o ParticuleNeige.o 
 	$(CXX) $(CXXFLAGS) $(COMMON_OBJS) testNeige.o -o testNeige
 
 testP11: $(COMMON_OBJS) testP11.o
