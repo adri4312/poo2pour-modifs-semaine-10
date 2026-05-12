@@ -51,6 +51,8 @@ public :
 	virtual void ajouteForce(Agent& autre) =0;
 	// méthode permettant d'ajouter un vecteur à la force:
 	void ajouteForceVecteur(const Vecteur3D& f) { force += f; };
+	//méthode ajouteForce qui dépend du milieu
+	void ajouteForceMilieu (double r, double e);
 	
 	//méthode permettant de créer un unique_ptr sur une particule du type choisi
 	virtual std :: unique_ptr<Particule> type() const =0;

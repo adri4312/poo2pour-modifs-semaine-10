@@ -64,6 +64,10 @@ void Particule::ajouteForce(Obstacle const& O){
 	force += (~e) * (2 * forceLJ(d));
 	};
 */
+
+//forces pour la methode d'euler
+void Particule::ajouteForceMilieu(double r, double e) {force += lambda(r, e) + phy::g * masse();};
+
 double Particule::forceLJ(double x) {
 	return ((24*epsilon)/pow(sigma, 2))*f(x/sigma);
 };

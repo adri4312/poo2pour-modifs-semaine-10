@@ -54,6 +54,9 @@ void Systeme::evolue(double dt) {
 
     while (dt > 1e-10) {
 	
+	        for (auto& p : PA) {
+            p->ajouteForceMilieu(r, e);
+        }
 	
 	//initialisation d'un tableau d'agents
 	vector<Agent*> agents;

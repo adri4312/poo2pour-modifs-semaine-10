@@ -29,8 +29,7 @@ void ParticuleNeige ::dessine_sur(SupportADessin& support) const
     force += (~e) * forceLJ(d);
     }
   //méthode opère sur Particule neige sur Obstacle
-  void ParticuleNeige :: opere_sur( Obstacle& O){	 
- }
+  void ParticuleNeige :: opere_sur( Obstacle& O){}
 // méthode opère sur Particule neige sur ParticuleRoche
 	void ParticuleNeige:: opere_sur(ParticuleRoche& p){
 	 Vecteur3D e = p.getPosition() - position;

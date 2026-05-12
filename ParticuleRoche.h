@@ -1,8 +1,6 @@
 #pragma once
 #include "constantes.h"
-
 #include <memory>
-
 #include "Particule.h"
 class ParticuleNeige;
 class Agent;
