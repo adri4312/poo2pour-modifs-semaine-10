@@ -17,6 +17,8 @@ void Source::creation(vector<unique_ptr<Particule>>& particules, double dt)
 		
 		//auto permet d'aller assigner le type réel donné par la fonction type à l'objet p
         auto p = modele->type();
+		// effet esthetique pour que la particule genere soit a la position de la source
+		p->setPosition(position);
 
         double vx = generateur.gaussienne(v_m_i.get_x(), e_v);
         double vy = generateur.gaussienne(v_m_i.get_y(), e_v);
