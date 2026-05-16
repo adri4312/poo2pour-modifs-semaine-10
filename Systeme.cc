@@ -59,7 +59,7 @@ void Systeme::evolue(double dt) {
 		 while (dt > 1e-10) {
 	
 	        for (auto& p : PA) {
-            p->ajouteForceMilieu(r, e);
+            p->ajouteForce(r, e);
         };};
 		// tableau d'agents
         vector<Agent*> agents;
