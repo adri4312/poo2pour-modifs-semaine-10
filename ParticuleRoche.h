@@ -10,6 +10,7 @@ class SupportADessin;
 
 class ParticuleRoche : public Particule {
 	public:
+	using Particule::ajouteForce; 
 	//Constructeurs
 	ParticuleRoche(Vecteur3D pst,Vecteur3D vts, double m_vo, double ry);
 	ParticuleRoche();
