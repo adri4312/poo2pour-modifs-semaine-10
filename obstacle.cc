@@ -89,49 +89,9 @@ void Dalle::opere_sur(Obstacle& o)       {}
 		os << " Plan d'origine " << o.get_O() << " et de normale" << o.get_n()<<endl;
 		return os;
 	};
-/*	
-	// fonctions héritées de Agent
-	 void Plan :: opere_sur(ParticuleNeige& p) { 
-	Vecteur3D e = p.getPosition() - PointPlusProche(p.getPosition());
-	double d = e.norme(); 
-	if (d == 0.0) return ;
-	p.ajouteForceVecteur ((~e) * (2 * p.forceLJ(d)));
-	}
-	 
-	void Plan :: opere_sur(Obstacle& O) {}
-	 
-	void Plan :: opere_sur(ParticuleRoche& p) {
-	Vecteur3D e = p.getPosition() - PointPlusProche(p.getPosition());
-	double d = e.norme(); 
-	if (d == 0.0) return ;
-	p.ajouteForceVecteur ((~e) * (1.2 * p.forceLJ(d)));
 
-}
 	
-	
-	
-	
-	
-	
-	
-	// fonctions héritées de Agent pour Dalle
-	 void Dalle :: opere_sur(ParticuleNeige& p) { 
-	Vecteur3D e = p.getPosition() - PointPlusProche(p.getPosition());
-	double d = e.norme(); 
-	if (d == 0.0) return ;
-	p.ajouteForceVecteur ((~e) * (2 * p.forceLJ(d)));
-	}
-	 
-	void Dalle :: opere_sur(Obstacle& O) {}
-	 
-	void Dalle :: opere_sur(ParticuleRoche& p) {
-	Vecteur3D e = p.getPosition() - PointPlusProche(p.getPosition());
-	double d = e.norme(); 
-	if (d == 0.0) return ;
-	p.ajouteForceVecteur ((~e) * (1.2 * p.forceLJ(d)));
-}
-	
-*/
+
 
 //Constructeur de Dalle
 	Dalle :: Dalle (double L_, double l_, Vecteur3D O_, Vecteur3D n_, Vecteur3D vl_, Vecteur3D vL_)
