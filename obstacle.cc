@@ -42,14 +42,14 @@ void Plan::opere_sur(ParticuleNeige& p) {
     Vecteur3D e = p.getPosition() - PointPlusProche(p.getPosition());
     double d = e.norme(); 
     if (d == 0.0) return;
-    p.ajouteForceVecteur((~e) * (2 * p.forceLJ(d)));
+    p.ajouteForce((~e) * (2 * p.forceLJ(d)));
 }
 
 void Plan::opere_sur(ParticuleRoche& p) {
     Vecteur3D e = p.getPosition() - PointPlusProche(p.getPosition());
     double d = e.norme(); 
     if (d == 0.0) return;
-    p.ajouteForceVecteur((~e) * (1.2 * p.forceLJ(d)));
+    p.ajouteForce((~e) * (1.2 * p.forceLJ(d)));
 }
 
 void Plan::opere_sur(Obstacle& o) {} 
